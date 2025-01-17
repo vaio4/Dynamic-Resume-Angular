@@ -1,0 +1,29 @@
+.education-wrapper{
+    margin-bottom: 5px;
+    width: 70vw;
+}
+.education-main-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    font-size: 12px;
+}
+.education-inner-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.edu-top-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.edu-bottom-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+mat-expansion-panel-header{
+    height: 2rem !important;
+}

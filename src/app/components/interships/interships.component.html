@@ -1,0 +1,30 @@
+<div class="Internships-wrapper" id="internships">
+    <mat-accordion>
+        <mat-expansion-panel [expanded]="true" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>Certification</mat-panel-title>
+          </mat-expansion-panel-header>
+          <hr>
+            <div class="Internships-main-wrapper" *ngFor="let item of internDetails; index as i;">
+                <div class="intern-top">
+                    <div class="intern-top-left">
+                        <span><b>{{item.internshipName}}, </b></span>
+                        <span><b> | </b></span>
+                        <span><b>{{item.internshipCompany}} : </b></span>
+                        <span><a href={{item.linkText}} target="_blank">Link</a></span>
+                    </div>
+                    <div class="intern-top-right">
+                        <span><b>{{item.internshipLoc}}</b></span>
+                        <span><b> | </b></span>
+                        <span><b>{{item.internshipDate}}</b></span>
+                    </div>
+                </div>
+                <div class="intern-bottom">
+                    <ul *ngFor="let desc of item.description">
+                        <li>{{desc}}</li>
+                    </ul>
+                </div>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

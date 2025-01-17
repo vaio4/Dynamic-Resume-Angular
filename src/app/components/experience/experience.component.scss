@@ -1,0 +1,47 @@
+.experience-wrapper{
+    margin-bottom: 5px;
+    width: 70vw;
+}
+.experience-main-wrapper{
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+}
+.exp-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+mat-expansion-panel-header{
+    height: 2rem !important;
+}
+button {
+    background: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    border: none;
+}
+button:hover{
+    background: white;
+    color: black;
+}
+mat-accordion.mat-accordion.modal-main {
+    display: block;
+    position: relative;
+    width: 50vw;
+    left: 10rem;
+    bottom: 13rem;
+}
+mat-panel-title{
+    color: black !important;
+}
+.jobdesc-btn{
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}

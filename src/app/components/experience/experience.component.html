@@ -1,0 +1,55 @@
+<div class="experience-wrapper" id="experience">
+    <mat-accordion>
+        <mat-expansion-panel [expanded]="true" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>Experience</mat-panel-title>
+          </mat-expansion-panel-header>
+          <hr>
+            <div class="experience-main-wrapper" *ngFor="let item of expDetails; index as i;">
+                <div class="exp-top">
+                    <div class="exp-top-left">
+                        <span><b>{{item.Role}}</b></span>
+                        <span><b> | </b></span>
+                        <span><b>{{item.Company}}</b></span>
+                        <span *ngIf="item.isAvailable">
+                            <button mat-button (click) = "openModal()">
+                                More...
+                            </button>
+                        </span>
+                    </div>
+                    <div class="exp-top-right">
+                        <span><b>{{item.Place}}</b></span>
+                        <span *ngIf="item.Place !== ''"><b> | </b></span>
+                        <span><b>{{item.Date}}</b></span>
+                    </div>
+                </div>
+                <div class="exp-bottom">
+                    <ul *ngFor="let desc of item.Description">
+                        <li>{{desc}}</li>
+                    </ul>
+                </div>
+            </div>
+
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
+<mat-accordion *ngIf="isModal" class="modal-main">
+    <mat-expansion-panel [expanded]="true" [disabled]="true" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            Description
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <hr>
+        <div class="desc-wrapper">
+            <div class="jobdesc">
+                <ul *ngFor="let desc of descriptionDetails; index as j">
+                    <li>{{desc}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="jobdesc-btn">
+            <button mat-button (click)="closeModal()">Close</button>
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>

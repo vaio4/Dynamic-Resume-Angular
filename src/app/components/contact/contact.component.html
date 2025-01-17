@@ -1,0 +1,42 @@
+<div class="contact-wrapper" id="contact">
+    <div class="contact-heading">Contact Me!</div>
+    <div class="contact-form-content">
+    <form [formGroup]="contactForm" (ngSubmit)="sendEmail($event)" class="contact-form">
+        <div class="form-field">
+          <label for="user_name">Name</label>
+          <input id="user_name" type="text" formControlName="user_name" />
+          <div class="error" *ngIf="contactForm.get('user_name')?.hasError('required') && contactForm.get('user_name')?.touched">
+            Name is required
+          </div>
+          <div class="error" *ngIf="contactForm.get('user_name')?.hasError('minlength') && contactForm.get('user_name')?.touched">
+            Name must be at least 3 characters long
+          </div>
+        </div>
+      
+        <div class="form-field">
+          <label for="user_email">Email</label>
+          <input id="user_email" type="email" formControlName="user_email" />
+          <div class="error" *ngIf="contactForm.get('user_email')?.hasError('required') && contactForm.get('user_email')?.touched">
+            Email is required
+          </div>
+          <div class="error" *ngIf="contactForm.get('user_email')?.hasError('email') && contactForm.get('user_email')?.touched">
+            Please enter a valid email address
+          </div>
+        </div>
+      
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" formControlName="message" rows="4"></textarea>
+          <div class="error" *ngIf="contactForm.get('message')?.hasError('required') && contactForm.get('message')?.touched">
+            Message is required
+          </div>
+          <div class="error" *ngIf="contactForm.get('message')?.hasError('minlength') && contactForm.get('message')?.touched">
+            Message must be at least 10 characters long
+          </div>
+        </div>
+      
+        <button type="submit" [disabled]="contactForm.invalid" class="submit-btn">Send</button>
+      </form>
+      </div>
+</div>
+  

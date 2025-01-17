@@ -1,0 +1,35 @@
+<div class="education-wrapper" id="education">
+<mat-accordion>
+    <mat-expansion-panel [expanded]="true" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Education </mat-panel-title>
+      </mat-expansion-panel-header>
+      <hr>
+        <div class="education-main-wrapper">
+            <div class="education-inner-wrapper" *ngFor="let item of educationDetails; index as i;">
+                <div class="edu-top-section">
+                    <div class="edu-top-left">
+                        <span><b>{{item.College}}, </b></span>
+                        <span><b>{{item.Course}}, </b></span>
+                        <span><b>Grade: {{item.Marks}} </b></span>
+                    </div>
+                    <div class="edu-top-right">
+                        <b>{{item.Dates}}</b>
+                    </div>
+                </div>
+                <div class="edu-bottom-section">
+                    <div class="edu-bottom-left">
+                        <span><b>Curriculum: </b></span>
+                        <span *ngFor="let curriculum of item.Curriculum; index as i ">
+                            {{curriculum}} | 
+                        </span>
+                    </div>
+                    <div class="edu-bottom-right">
+                        <b>{{item.Place}}</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>
+</div>

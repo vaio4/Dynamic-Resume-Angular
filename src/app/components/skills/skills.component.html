@@ -1,0 +1,28 @@
+<div class="skills-wrapper" id="skills">
+    <div class="skills-main-wrapper">
+        <div class="skills-heading">
+           <h6>Skills</h6>
+        </div>
+        <div><hr></div>
+        <div class="skills-content-wrapper">
+        <div class="skills-content" *ngFor="let skill of skillsDetails; index as j;">
+            <div class="skills-left">
+                <b>{{skill.skillHeading}}:&nbsp;</b> 
+            </div>
+            <div class="skills-right" [ngClass]="{
+                'first': skill.id === 1,
+                'second': skill.id === 2,
+                'third': skill.id === 3,
+                'four': skill.id === 4
+            }" *ngFor="let item of skill.skillDesc; index as i;">
+                <span (click)="enableToggle(j,i)">{{item.langName}}</span>
+                <span></span>
+                <div *ngIf="isToggle[j][i]" class="skill-rating">
+                    <p>Proficiency</p>
+                    <p>{{item.langProficiency}}</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

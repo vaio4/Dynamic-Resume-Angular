@@ -1,0 +1,43 @@
+.header-main-wrapper {
+    display: flex;
+    padding: 10px;
+    width: 70vw;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.profile-pic {
+    background-image: url("../../../../public/Abhay.JPG");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+button {
+    border: none;
+    margin: 5px;
+    padding: 5px;
+    /* color: white; */
+    background: black;
+    border-radius: 5px;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+button:hover {
+    background: white;
+}
+
+button a:hover {
+    color: black;
+}

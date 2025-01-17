@@ -1,0 +1,96 @@
+.main-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.inner-wrapper{
+    width: 80%;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Navigation container */
+  .navigation {
+    position: fixed; /* Keeps navigation fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Dark background */
+    padding: 10px 0;
+    z-index: 1000; /* Ensures it's always on top */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Unordered list for navigation links */
+  .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the items */
+  }
+  
+  /* List items in the navigation */
+  .navigation li {
+    margin: 0 15px; /* Space between items */
+  }
+  
+  /* Navigation links */
+  .navigation a {
+    text-decoration: none;
+    color: white; /* White text color */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+  }
+  
+  /* Navigation links on hover */
+  .navigation a:hover {
+    background-color: #555; /* Darker background on hover */
+    color: #fff; /* Ensure the text remains white */
+  }
+  
+  /* Active link styles (if needed) */
+  .navigation a.active {
+    background-color: #4CAF50; /* Green background for active link */
+    color: white;
+  }
+  
+  /* Ensure the navigation does not overlap content */
+  .main-wrapper {
+    margin-top: 60px; /* Adjust the top margin to accommodate the fixed navigation bar */
+  }
+  
+  /* Responsive design for small screens */
+  @media (max-width: 768px) {
+    .navigation ul {
+      flex-direction: column; /* Stack items vertically on small screens */
+      align-items: center;
+    }
+  
+    .navigation li {
+      margin: 10px 0; /* Add vertical spacing for items */
+    }
+  
+    .navigation a {
+      font-size: 14px; /* Smaller font size on mobile */
+    }
+  }
+  

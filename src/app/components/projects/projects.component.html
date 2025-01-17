@@ -1,0 +1,28 @@
+<div class="projects-wrapper" id="projects">
+    <mat-accordion>
+        <mat-expansion-panel [expanded]="true" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>Projects</mat-panel-title>
+          </mat-expansion-panel-header>
+          <hr>
+            <div class="projects-main-wrapper" *ngFor="let item of projectDetails; index as i;">
+                <div class="projects-top">
+                    <div class="projects-top-left">
+                        <span><b>{{item.projectName}}, </b></span>
+                        <span><b> | </b></span>
+                        <span><b>{{item.projectCompany}} : </b></span>
+                        <span><a href={{item.linkText}} target="_blank">Link</a></span>
+                    </div>
+                    <div class="projects-top-right">
+                        <span><b>{{item.projectDate}}</b></span>
+                    </div>
+                </div>
+                <div class="projects-bottom">
+                    <ul>
+                        <li>{{item.projectDescription}}</li>
+                    </ul>
+                </div>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

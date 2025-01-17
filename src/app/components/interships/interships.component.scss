@@ -1,0 +1,18 @@
+.Internships-wrapper{
+    margin-bottom: 5px;
+    width: 70vw;
+}
+.Internships-main-wrapper{
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+}
+.intern-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+mat-expansion-panel-header{
+    height: 2rem !important;
+}

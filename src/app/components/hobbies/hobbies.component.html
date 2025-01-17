@@ -1,0 +1,21 @@
+<div class="hobbies-wrapper" id="hobbies">
+    <mat-accordion>
+        <mat-expansion-panel [expanded]="true" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>Hobbies</mat-panel-title>
+          </mat-expansion-panel-header>
+          <hr>
+            <div class="hobbies-main-wrapper" *ngFor="let item of hobbiesDetails; index as i;">
+                <div class="hobbies-top">
+                  <b>{{item.hobbiesheading}}</b>
+                </div>
+                <div class="hobbies-bottom">
+                    <ul>
+                        <li>{{item.hobbiesdesc}}</li>
+                    </ul>
+                </div>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
+

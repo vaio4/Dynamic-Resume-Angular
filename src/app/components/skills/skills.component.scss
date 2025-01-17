@@ -1,0 +1,80 @@
+.skills-wrapper{
+    display: flex;
+    font-size: 12px;
+    margin-bottom: 5px;
+    background-color: white;
+    color: black;
+    width: 70vw;
+    padding: 5px;
+    border-radius: 5px;
+}
+.skills-main-wrapper{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.skills-content-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.skill-rating{
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+.skills-content{
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px auto;
+    height: fit-content;
+}
+.skills-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.skills-right span:last-of-type{
+    display: none;
+}
+.skills-right span:last-of-type:hover{
+    display: block;
+}
+.skills-right.first {
+    margin: 2px;
+    background: rgb(150, 227, 153);
+    padding: 2px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.skills-right.second {
+    margin: 4px;
+    background: rgb(162, 191, 234);
+    padding: 2px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.skills-right.third {
+    margin: 2px;
+    background: rgb(223, 195, 142);
+    padding: 2px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.skills-right.four {
+    margin: 5px;
+    background: rgb(226, 137, 137);
+    padding: 2px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
